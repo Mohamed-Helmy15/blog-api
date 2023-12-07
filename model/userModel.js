@@ -54,8 +54,8 @@ const userSchema = mongoose.Schema(
     resetPasswordToken: String,
     resetPasswordTokenExpires: Date,
   },
-  { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } },
   {
+    timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
   }
