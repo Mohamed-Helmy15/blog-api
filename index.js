@@ -34,7 +34,7 @@ app.use(xss());
 app.use(compression());
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://blog-app-forntend.vercel.app"],
   })
 );
 app.use("/api/v1/users", userRoute);
