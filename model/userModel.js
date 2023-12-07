@@ -54,11 +54,11 @@ const userSchema = mongoose.Schema(
     resetPasswordToken: String,
     resetPasswordTokenExpires: Date,
   },
+  { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } },
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
-  },
-  { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
+  }
 );
 
 userSchema.virtual("blogs", {

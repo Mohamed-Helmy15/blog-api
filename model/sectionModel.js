@@ -18,11 +18,11 @@ const sectionSchema = new mongoose.Schema(
       ref: "Blog",
     },
   },
+  { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } },
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
-  },
-  { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
+  }
 );
 
 sectionSchema.pre(/^find/, function (next) {
