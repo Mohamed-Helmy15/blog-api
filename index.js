@@ -4,16 +4,13 @@ const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const multer = require("multer");
 const helmet = require("helmet");
 const morgan = require("morgan");
-const { rateLimit } = require("express-rate-limit");
 const xss = require("xss-clean");
 const ExpressMongoSanitize = require("express-mongo-sanitize");
 const compression = require("compression");
 const userRoute = require("./routes/userRoute");
 const blogRoute = require("./routes/blogRoute");
-const sectionRoute = require("./routes/sectionRoute");
 
 const errorController = require("./controller/errorController");
 const AppError = require("./utils/appError");
