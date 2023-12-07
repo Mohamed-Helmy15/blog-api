@@ -53,10 +53,9 @@ exports.resizeSectionPhoto = catchAsync(async (req, res, next) => {
 
   req.file.filename = `sections-${req.user.id}-${Date.now()}.jpeg`;
   await sharp(req.file.buffer)
-    .resize(500, 500)
     .toFormat("jpeg")
     .jpeg({
-      quality: 90,
+      quality: 100,
     })
     .toFile(`public/img/sections/${req.file.filename}`);
   next();
