@@ -19,6 +19,7 @@ const createSendToken = (user, statusCode, res) => {
     ),
     httpOnly: true,
     secure: true,
+    domain: 'https://blog-full-websit.vercel.app',
   };
 
   res.cookie("jwt", token, cookieOptions);
